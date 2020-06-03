@@ -28,7 +28,7 @@ namespace Azure.DigitalTwins.Core
         private readonly QueryRestClient _queryClient;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DigitalTwinsClient"/> class.
+        /// Creates a new instance of the <see cref="DigitalTwinsClient"/> class.
         /// </summary>
         /// <param name='endpoint'>The Azure digital twins service instance URI to connect to.</param>
         /// <param name="credential">The <see cref="TokenCredential"/> implementation which will be used to request for the authentication token.</param>
@@ -53,7 +53,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DigitalTwinsClient"/> class.
+        /// Creates a new instance of the <see cref="DigitalTwinsClient"/> class.
         /// </summary>
         /// <param name='endpoint'>The Azure digital twins service instance URI to connect to.</param>
         /// <param name="credential">The <see cref="TokenCredential"/> implementation which will be used to request for the authentication token.</param>
@@ -96,7 +96,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DigitalTwinsClient"/> class.
+        /// Creates a new instance of the <see cref="DigitalTwinsClient"/> class.
         /// </summary>
         protected DigitalTwinsClient()
         {
@@ -104,7 +104,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get a digital twin.
+        /// Gets a digital twin asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <remarks>
         /// The returned application/json string can always be deserialized into an instance of <see cref="Serialization.BasicDigitalTwin"/>.
@@ -120,7 +120,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get a digital twin.
+        /// Gets a digital twin synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <remarks>
         /// The returned application/json string can always be deserialized into an instance of <see cref="Serialization.BasicDigitalTwin"/>.
@@ -136,7 +136,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create a digital twin.
+        /// Creates a digital twin asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
         /// <param name="digitalTwin">The application/json digital twin to create.</param>
@@ -171,7 +171,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create a digital twin.
+        /// Creates a digital twin synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
         /// <param name="digitalTwin">The application/json digital twin to create.</param>
@@ -184,7 +184,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Delete a digital twin.
+        /// Deletes a digital twin asynchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin to delete.</param>
         /// <param name="requestOptions">The optional settings for this request.</param>
@@ -204,7 +204,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Delete a digital twin.
+        /// Deletes a digital twin synchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin to delete.</param>
         /// <param name="requestOptions">The optional settings for this request.</param>
@@ -219,7 +219,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Update a digital twin.
+        /// Updates a digital twin asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin to update.</param>
         /// <param name="digitalTwinUpdateOperations">The application/json-patch+json operations to be performed on the specified digital twin.</param>
@@ -233,7 +233,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Update a digital twin.
+        /// Updates a digital twin synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin to update.</param>
         /// <param name="digitalTwinUpdateOperations">The application/json-patch+json operations to be performed on the specified digital twin.</param>
@@ -246,7 +246,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets a component on a digital twin.
+        /// Gets a component on a digital twin asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
         /// <param name="componentPath">The component being retrieved.</param>
@@ -265,7 +265,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets a component on a digital twin.
+        /// Gets a component on a digital twin synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
         /// <param name="componentPath">The component being retrieved.</param>
@@ -277,7 +277,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Updates properties of a component on a digital twin.
+        /// Updates properties of a component on a digital twin asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
         /// <param name="componentPath">The component being modified.</param>
@@ -304,7 +304,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Updates properties of a component on a digital twin.
+        /// Updates properties of a component on a digital twin synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
         /// <param name="componentPath">The component being modified.</param>
@@ -318,7 +318,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets all the relationships on a digital twin.
+        /// Gets all the relationships on a digital twin asynchronously. After the task completes response would be set to <see cref="AsyncPageable{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipName">The name of a relationship to filter to. If null, all relationships for the digital twin will be returned.</param>
@@ -372,7 +372,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets all the relationships on a digital twin.
+        /// Gets all the relationships on a digital twin synchronously. After the task completes response would be set to <see cref="Pageable{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipName">The name of a relationship to filter to. If null, all relationships for the digital twin will be returned.</param>
@@ -421,7 +421,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets all the relationships referencing a digital twin as a target.
+        /// Gets all the relationships referencing a digital twin as a target asynchronously. After the task completes response would be set to <see cref="AsyncPageable{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the target digital twin.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -469,7 +469,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets all the relationships referencing a digital twin as a target.
+        /// Gets all the relationships referencing a digital twin as a target synchronously. After the task completes response would be set to <see cref="Pageable{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the target digital twin.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -512,7 +512,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get a relationship on a digital twin.
+        /// Gets a relationship on a digital twin asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship to retrieve.</param>
@@ -525,7 +525,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get a relationship on a digital twin.
+        /// Gets a relationship on a digital twin synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship to retrieve.</param>
@@ -538,7 +538,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Delete a relationship on a digital twin.
+        /// Deletes a relationship on a digital twin asynchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship to delete.</param>
@@ -551,7 +551,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Delete a relationship on a digital twin.
+        /// Deletes a relationship on a digital twin synchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship to delete.</param>
@@ -564,7 +564,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create a relationship on a digital twin.
+        /// Creates a relationship on a digital twin asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship which is being created.</param>
@@ -593,7 +593,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create a relationship on a digital twin.
+        /// Creates a relationship on a digital twin synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship to delete.</param>
@@ -610,7 +610,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Updates the properties of a relationship on a digital twin.
+        /// Updates the properties of a relationship on a digital twin asynchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship to be updated.</param>
@@ -625,7 +625,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Updates the properties of a relationship on a digital twin.
+        /// Updates the properties of a relationship on a digital twin synchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the source digital twin.</param>
         /// <param name="relationshipId">The Id of the relationship to be updated.</param>
@@ -639,7 +639,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets the list of models.
+        /// Gets the list of models asynchronously. After the task completes response would be set to <see cref="AsyncPageable{T}"/>.
         /// </summary>
         /// <param name="dependenciesFor">The model Ids to have dependencies retrieved.</param>
         /// <param name="includeModelDefinition">Whether to include the model definition in the result. If false, only the model metadata will be returned.</param>
@@ -693,7 +693,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Gets the list of models.
+        /// Gets the list of models synchronously. After the task completes response would be set to <see cref="Pageable{T}"/>.
         /// </summary>
         /// <param name="dependenciesFor">The model Ids to have dependencies retrieved.</param>
         /// <param name="includeModelDefinition">Whether to include the model definition in the result. If false, only the model metadata will be returned.</param>
@@ -738,7 +738,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get a model, including the model metadata and the model definition.
+        /// Gets a model, including the model metadata and the model definition asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="modelId">The Id of the model.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -755,7 +755,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get a model, including the model metadata and the model definition.
+        /// Gets a model, including the model metadata and the model definition synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="modelId">The Id of the model.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -767,7 +767,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Decommission a model.
+        /// Decommissions a model asynchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="modelId">The Id of the model to decommission.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -797,7 +797,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Decommission a model.
+        /// Decommissions a model synchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="modelId">The Id of the model to decommission.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -813,7 +813,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create one or many models.
+        /// Creates one or many models asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="models">The set of models to create. Each string corresponds to exactly one model.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -836,7 +836,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create one or many models.
+        /// Creates one or many models synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="models">The set of models to create. Each string corresponds to exactly one model.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -853,7 +853,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Deletes a model.
+        /// Deletes a model asynchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="modelId"> The id for the model. The id is globally unique and case sensitive. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
@@ -885,7 +885,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Deletes a model.
+        /// Deletes a model synchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="modelId"> The id for the model. The id is globally unique and case sensitive. </param>
         /// <param name="cancellationToken"> The cancellation token to use. </param>
@@ -903,7 +903,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Query for digital twins.
+        /// Queries for digital twins asynchronously. After the task completes response would be set to <see cref="AsyncPageable{T}"/>.
         /// </summary>
         /// <param name="query">The query string, in SQL-like syntax.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -972,7 +972,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Query for digital twins.
+        /// Queries for digital twins synchronously. After the task completes response would be set to <see cref="Pageable{T}"/>.
         /// </summary>
         /// <param name="query">The query string, in SQL-like syntax.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -1028,7 +1028,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>.
-        /// List the event routes in a digital twins instance.
+        /// Lists the event routes in a digital twins instance asynchronously. After the task completes response would be set to <see cref="AsyncPageable{T}"/>.
         /// </summary>
         /// <param name="options">The options to use when listing the event routes. One can set the maximum number of items to retrieve per request, however the service may return less than requested.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -1080,7 +1080,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>.
-        /// List the event routes in a digital twins instance.
+        /// Lists the event routes in a digital twins instance synchronously. After the task completes response would be set to <see cref="Pageable{T}"/>.
         /// </summary>
         /// <param name="options">The options to use when listing the event routes. One can set the maximum number of items to retrieve per request, however the service may return less than requested.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -1123,7 +1123,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get an event route by Id.
+        /// Gets an event route by Id asynchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="eventRouteId">The Id of the event route.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -1134,7 +1134,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Get an event route by Id.
+        /// Gets an event route by Id synchronously. After the task completes response would be set to <see cref="Response{T}"/>.
         /// </summary>
         /// <param name="eventRouteId">The Id of the event route.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -1145,7 +1145,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create an event route.
+        /// Creates an event route asynchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="eventRouteId">The Id of the event route to create.</param>
         /// <param name="eventRoute">The event route data containing the endpoint and optional filter.</param>
@@ -1168,7 +1168,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Create an event route.
+        /// Creates an event route synchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="eventRouteId">The Id of the event route to create.</param>
         /// <param name="eventRoute">The event route data containing the endpoint and optional filter.</param>
@@ -1180,7 +1180,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Delete an event route.
+        /// Deletes an event route asynchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="eventRouteId">The Id of the event route to delete.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -1196,7 +1196,7 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Delete an event route.
+        /// Deletes an event route synchronously. After the task completes response would be set to <see cref="Response"/>.
         /// </summary>
         /// <param name="eventRouteId">The Id of the event route to delete.</param>
         /// <param name="cancellationToken">The cancellation token.</param>
@@ -1207,7 +1207,8 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Publish telemetry from a digital twin, which is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
+        /// Publishes telemetry from a digital twin asynchronously. After the task completes response would be set to <see cref="Response"/>.
+        /// The result is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
         /// These event routes need to be set before publishing a telemetry message, in order for the telemetry message to be consumed.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
@@ -1232,7 +1233,8 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Publish telemetry from a digital twin, which is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
+        /// Publishes telemetry from a digital twin synchronously. After the task completes response would be set to <see cref="Response"/>.
+        /// The result is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
         /// These event routes need to be set before publishing a telemetry message, in order for the telemetry message to be consumed.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
@@ -1249,7 +1251,8 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Publish telemetry from a digital twin's component, which is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
+        /// Publishes telemetry from a digital twin's component asynchronously. After the task completes response would be set to <see cref="Response"/>.
+        /// The result is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
         /// These event routes need to be set before publishing a telemetry message, in order for the telemetry message to be consumed.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
@@ -1279,7 +1282,8 @@ namespace Azure.DigitalTwins.Core
         }
 
         /// <summary>
-        /// Publish telemetry from a digital twin's component, which is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
+        /// Publishes telemetry from a digital twin's component synchronously. After the task completes response would be set to <see cref="Response"/>.
+        /// The result is then consumed by one or many destination endpoints (subscribers) defined under <see cref="EventRoute"/>.
         /// These event routes need to be set before publishing a telemetry message, in order for the telemetry message to be consumed.
         /// </summary>
         /// <param name="digitalTwinId">The Id of the digital twin.</param>
